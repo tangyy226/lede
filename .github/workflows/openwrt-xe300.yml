@@ -9,7 +9,7 @@ name: OpenWrt-xe300
 
 on:
   schedule:
-    - cron: 0 3 * * *
+    - cron: 0 4 * * *
   release:
     types: [published]
 
