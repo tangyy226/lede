@@ -9,7 +9,7 @@ name: OpenWrt-xe300
 
 on:
   schedule:
-    - cron: 18 2 * * *
+    - cron: 15 6 * * *
   release:
     types: [published]
 
@@ -120,6 +120,14 @@ jobs:
           sed -i "6i uci set network.lan.ifname='eth0'" ./package/lean/default-settings/files/zzz-default-settings  # 网络端口：默认 eth0，第一个接口
           sed -i "7i uci set network.lan.netmask='255.255.255.0'" ./package/lean/default-settings/files/zzz-default-settings    # 子网掩码
           sed -i "10i uci commit network\n" ./package/lean/default-settings/files/zzz-default-settings
+          
+          sed -i "12i uci set wireless.@wifi-device[0].disabled=0" ./package/lean/default-settings/files/zzz-default-settings
+          sed -i "13i uci set wireless.@wifi-iface[0].mode=ap" ./package/lean/default-settings/files/zzz-default-settings
+          sed -i "14i uci set wireless.@wifi-iface[0].ssid=xe300" ./package/lean/default-settings/files/zzz-default-settings
+          sed -i "15i uci set wireless.@wifi-iface[0].network=lan" ./package/lean/default-settings/files/zzz-default-settings
+          sed -i "16i uci set wireless.@wifi-iface[0].encryption=psk2" ./package/lean/default-settings/files/zzz-default-settings
+          sed -i "17i uci uci set wireless.@wifi-iface[0].key=goodlife" ./package/lean/default-settings/files/zzz-default-settings
+          sed -i "18i uci commit wireless\n" ./package/lean/default-settings/files/zzz-default-settings
           
 
       - name: Make download
