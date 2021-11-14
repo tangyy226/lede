@@ -22,6 +22,9 @@ platform_do_upgrade() {
 	glinet,gl-ar750s-nor-nand)
 		nand_nor_do_upgrade "$1"
 		;;
+	glinet_gl-xe300-nor-nand)
+		nand_nor_do_upgrade "$1"
+		;;
 	*)
 		nand_do_upgrade "$1"
 		;;
