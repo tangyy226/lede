@@ -9,7 +9,7 @@ name: OpenWrt-xe300
 
 on:
   schedule:
-    - cron: 10 7 * * *
+    - cron: 0 10 * * *
   release:
     types: [published]
 
@@ -66,8 +66,52 @@ jobs:
           CONFIG_LIBCURL_OPENSSL=y
           CONFIG_LIBCURL_PROXY=y
           CONFIG_PACKAGE_curl=y
+          CONFIG_PACKAGE_edgeport-firmware=y
           CONFIG_PACKAGE_ip-tiny=y
+          CONFIG_PACKAGE_kmod-lib-crc16=y
+          CONFIG_PACKAGE_kmod-libphy=y
+          CONFIG_PACKAGE_kmod-mii=y
+          CONFIG_PACKAGE_kmod-usb-acm=y
+          CONFIG_PACKAGE_kmod-usb-net=y
+          CONFIG_PACKAGE_kmod-usb-net-aqc111=y
+          CONFIG_PACKAGE_kmod-usb-net-asix=y
+          CONFIG_PACKAGE_kmod-usb-net-asix-ax88179=y
+          CONFIG_PACKAGE_kmod-usb-net-cdc-eem=y
+          CONFIG_PACKAGE_kmod-usb-net-cdc-ether=y
+          CONFIG_PACKAGE_kmod-usb-net-cdc-mbim=y
+          CONFIG_PACKAGE_kmod-usb-net-cdc-ncm=y
+          CONFIG_PACKAGE_kmod-usb-net-cdc-subset=y
+          CONFIG_PACKAGE_kmod-usb-net-dm9601-ether=y
+          CONFIG_PACKAGE_kmod-usb-net-hso=y
+          CONFIG_PACKAGE_kmod-usb-net-huawei-cdc-ncm=y
+          CONFIG_PACKAGE_kmod-usb-net-ipheth=y
+          CONFIG_PACKAGE_kmod-usb-net-kalmia=y
+          CONFIG_PACKAGE_kmod-usb-net-kaweth=y
+          CONFIG_PACKAGE_kmod-usb-net-mcs7830=y
+          CONFIG_PACKAGE_kmod-usb-net-pegasus=y
+          CONFIG_PACKAGE_kmod-usb-net-pl=y
+          CONFIG_PACKAGE_kmod-usb-net-qmi-wwan=y
+          CONFIG_PACKAGE_kmod-usb-net-rndis=y
+          CONFIG_PACKAGE_kmod-usb-net-sierrawireless=y
+          CONFIG_PACKAGE_kmod-usb-net-smsc95xx=y
+          CONFIG_PACKAGE_kmod-usb-ohci=y
+          CONFIG_PACKAGE_kmod-usb-serial-cp210x=y
+          CONFIG_PACKAGE_kmod-usb-serial-cypress-m8=y
+          CONFIG_PACKAGE_kmod-usb-serial-dmx_usb_module=y
+          CONFIG_PACKAGE_kmod-usb-serial-edgeport=y
+          CONFIG_PACKAGE_kmod-usb-serial-ftdi=y
+          CONFIG_PACKAGE_kmod-usb-serial-garmin=y
+          CONFIG_PACKAGE_kmod-usb-serial-ipw=y
+          CONFIG_PACKAGE_kmod-usb-serial-keyspan=y
+          CONFIG_PACKAGE_kmod-usb-serial-mct=y
+          CONFIG_PACKAGE_kmod-usb-serial-mos7720=y
+          CONFIG_PACKAGE_kmod-usb-serial-qualcomm=y
+          CONFIG_PACKAGE_kmod-usb-serial-wwan=y
+          CONFIG_PACKAGE_kmod-usb-serial-xr_usb_serial_common=y
+          CONFIG_PACKAGE_kmod-usb-uhci=y
+          CONFIG_PACKAGE_kmod-usb-wdm=y
           CONFIG_PACKAGE_libcurl=y
+          CONFIG_PACKAGE_libusb-1.0=y
           # CONFIG_PACKAGE_luci-app-accesscontrol is not set
           # CONFIG_PACKAGE_luci-app-arpbind is not set
           # CONFIG_PACKAGE_luci-app-autoreboot is not set
@@ -93,6 +137,9 @@ jobs:
           # CONFIG_PACKAGE_shadowsocksr-libev-ssr-local is not set
           # CONFIG_PACKAGE_shadowsocksr-libev-ssr-redir is not set
           CONFIG_PACKAGE_simple-adblock=y
+          CONFIG_PACKAGE_uqmi=y
+          CONFIG_PACKAGE_usb-modeswitch=y
+          CONFIG_PACKAGE_wwan=y
           CONFIG_PACKAGE_xray-core=y
           CONFIG_XRAY_CORE_COMPRESS_UPX=y
           CONFIG_PACKAGE_etherwake=y
