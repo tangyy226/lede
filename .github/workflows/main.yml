@@ -9,7 +9,7 @@ name: OpenWrt-xe300
 
 on:
   schedule:
-    - cron: 0 10 * * *
+    - cron: 10 1 * * *
   release:
     types: [published]
 
@@ -58,6 +58,7 @@ jobs:
           CONFIG_TARGET_ath79=y
           CONFIG_TARGET_ath79_nand=y
           CONFIG_TARGET_ath79_nand_DEVICE_glinet_gl-xe300-nor-nand=y
+          # CONFIG_FEED_helloworld is not set
           CONFIG_LIBCURL_COOKIES=y
           CONFIG_LIBCURL_FILE=y
           CONFIG_LIBCURL_FTP=y
@@ -123,7 +124,6 @@ jobs:
           # CONFIG_PACKAGE_luci-app-ramfree is not set
           # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng is not set
           # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui is not set
-          CONFIG_PACKAGE_luci-app-simple-adblock=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client is not set
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
           # CONFIG_PACKAGE_luci-app-turboacc is not set
@@ -134,6 +134,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-vlmcsd is not set
           # CONFIG_PACKAGE_luci-app-vsftpd is not set
           # CONFIG_PACKAGE_luci-app-wol is not set
+          CONFIG_PACKAGE_luci-proto-qmi=y
           # CONFIG_PACKAGE_shadowsocksr-libev-ssr-local is not set
           # CONFIG_PACKAGE_shadowsocksr-libev-ssr-redir is not set
           CONFIG_PACKAGE_simple-adblock=y
